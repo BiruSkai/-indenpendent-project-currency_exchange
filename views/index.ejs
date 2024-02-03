@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currency Exchange</title>
+        <link rel="stylesheet" href="index.css">
+</head>
+<body>
+        <div class="mainContainer">
+                <h1>Currency Exchange</h1>
+                
+                <form method="post" action="/checkExchange" class="layout">
+                        <label>Input:</label>
+                        <input type="text" name="amountInput" value="1" %>">
+                        <select name="currencyInput">
+                                <option id="aud" value="aud">AUD</option>
+                                <option id="usd" value="usd">USD</option>
+                                <option id="eur" value="eur" selected>EUR</option>
+                                <option id="gbp" value="gbp">GBP</option>
+                                <option id="sgd" value="sgd">SGD</option>
+                                <option id="hkd" value="hkd">HKD</option>
+                                <option id="idr" value="idr">IDR</option>
+                                <option id="thb" value="thb">THB</option>
+                                <option id="jpy" value="jpy">JPY</option>
+                                <option id="nok" value="nok">NOK</option>
+                                <option id="sek" value="sek">SEK</option>
+                        </select><br>
+                        <label>Output currency:</label>
+                        <select name="currencyOutput">
+                                <option id="aud" value="aud">AUD</option>
+                                <option id="usd" value="usd">USD</option>
+                                <option id="eur" value="eur">EUR</option>
+                                <option id="gbp" value="gbp">GBP</option>
+                                <option id="sgd" value="sgd">SGD</option>
+                                <option id="hkd" value="hkd">HKD</option>
+                                <option id="idr" value="idr" selected>IDR</option>
+                                <option id="thb" value="thb">THB</option>
+                                <option id="jpy" value="jpy">JPY</option>
+                                <option id="nok" value="nok">NOK</option>
+                                <option id="sek" value="sek">SEK</option> 
+                        </select><br>
+                        <input type="submit" value="Check">
+                </form><hr>
+
+                <div class="answerContainer layout" >
+                        <% if (locals.data && locals.amountInput && locals.currencyInput && locals.currencyOutput) { %>
+                                <h3>Result:</h3>
+                                <p>Data from <%= data.date %></p>
+                                <P><%= amountInput %>&nbsp;<%= currencyInput %> = <%= amountOutput %>&nbsp;<%= currencyOutput %></P>
+                        <% } else if (locals.error) { %>
+                                <p><%= error %></p>
+                        <% } else { %>
+                                <p>Fill the data to get the exchange rates</p>
+                        <% } %>
+                </div>
+                <footer>
+                        <div>   
+                                <h3>Public API Project 2024</h3>
+                                <p>Develop by Biru Skai</p>
+                        </div>
+                </footer>
+        </div>
+</body>
+</html>

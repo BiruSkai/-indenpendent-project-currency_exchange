@@ -1,0 +1,62 @@
+html{
+        font-family:serif,sans-serif;
+}
+
+.mainContainer{
+        justify-content: flex-start;  
+        background-color: #f3f3f3;     
+        border-radius:5px; 
+}
+
+body{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        height:100vh;
+}
+
+.layout{
+        border:none;
+        padding:10px;
+        margin:10px;
+        border-radius:10px;
+}
+
+h1{
+        background-color: rgb(19 142 187);
+        padding:10px;
+        margin:0px 1px;
+        color:white;
+        border-radius:10px 10px 0px 0px;
+        text-align: center;
+}
+
+form{
+        line-height:2.5rem;
+}
+
+.answerContainer{
+        margin: 0px 10px;
+        
+}
+
+input, select{
+        padding:5px 10px;
+        border:none;
+        border-radius:5px;
+}
+
+input[type="submit"]{
+        background-color: #0079ff3d;
+}
+
+
+footer div{
+        text-align: center;
+        background-color: rgb(19 142 187);
+        padding:10px;
+        margin:0px 1px;
+        color:white;
+        border-radius:0px 0px 10px 10px;
+}
